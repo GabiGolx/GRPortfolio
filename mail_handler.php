@@ -3,31 +3,11 @@
 		$name=$_POST['name'];
 		$email=$_POST['email'];
 		$subject=$_POST['subject'];
-		$message=$_POST['message'];
+		$msg=$_POST['msg'];
 
 		$to='gabrielramirezacosta@hotmail.com';
 		$subject="Name: ".$subject;
-		$message="Name: ".$name."\n"."Wrote the following: "."\n\n".$message;
-		$headers="From: ".$email;
-
-		if(mail($to, $subject, $message, $headers)){
-			echo "<h1>Sent Succesfully! Thank you"." ".$name.", I will contact you shortly!</h1>";
-		} else {
-			echo "Something went wrong!";
-		}
-	}
- ?> 
-
- <?php
-	if(isset($_POST['submit'])){
-		$name=$_POST['name'];
-		$email=$_POST['email'];
-		$phone=$_POST['phone'];
-		$msg=$_POST['msg'];
-
-		$to='xyz.123@mail.com'; // Receiver Email ID, Replace with your email ID
-		$subject='Form Submission';
-		$message="Name :".$name."\n"."Phone :".$phone."\n"."Wrote the following :"."\n\n".$msg;
+		$message="Name: ".$name."\n"."Wrote the following: "."\n\n".$msg;
 		$headers="From: ".$email;
 
 		if(mail($to, $subject, $message, $headers)){
@@ -37,34 +17,8 @@
 			echo "Something went wrong!";
 		}
 	}
-?> -->
-
-<<?php 
-	if(isset($_POST['submit'])){
-		$name=$_POST['name'];
-		$email=$_POST['email'];
-		$phone=$_POST['phone'];
-		$msg=$_POST['msg'];
-
-		$to='xyz.123@mail.com'; // Receiver Email ID, Replace with your email ID
-		$subject='Form Submission';
-		$message="Name :".$name."\n"."Phone :".$phone."\n"."Wrote the following :"."\n\n".$msg;
-		$header="From: " . "\r\n";
-		$header.= "X-Mailer: PHP/". phpversion();
-
-		$mail = @mail($email, $subject, $message, $header);
-
-		if($mail) {
-			echo "<h4>enviado<h4>";
-		} 
+ ?> 
 
 
-		// if(mail($to, $subject, $message, $headers)){
-		// 	echo "<h1>Sent Successfully! Thank you"." ".$name.", We will contact you shortly!</h1>";
-		// }
-		// else{
-		// 	echo "Something went wrong!";
-		// }
-	}
- ?>
+
 
