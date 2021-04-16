@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -773,7 +773,9 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <<?php 
+    include("mail_handler.php")
+   ?>
 
 </body>
 </html>
- -->
