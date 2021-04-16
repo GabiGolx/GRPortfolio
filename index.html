@@ -635,7 +635,20 @@
     </div>
   </section> -->
   <!-- Section Blog End / -->
-
+  <div class="main">
+    <div class="info">Give Your Feedback!</div>
+    <form action="mail_handler.php" method="post" name="form" class="form-box">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" class="inp" placeholder="Enter Your Name" required><br>
+      <label for="email">Email ID</label><br>
+      <input type="email" name="email" class="inp" placeholder="Enter Your Email" required><br>
+      <label for="subject">Phone</label><br>
+      <input type="tel" name="subject" class="inp" placeholder="Enter Your Phone" required><br>
+      <label for="message">Message</label><br>
+      <textarea name="msg" class="msg-box" placeholder="Enter Your Message Here..." required></textarea><br>
+      <input type="submit" name="submit" value="Send" class="sub-btn">
+    </form>
+  </div>
   <!--/ Section Contact-Footer Star /-->
   <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
@@ -652,7 +665,7 @@
                     </h5>
                   </div>
                   <div>
-                      <form action="mail_handler.php" method="post" role="form" class="contactForm">
+                      <form action="mail_handler.php" method="post" role="form" name="form" class="contactForm">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
                       <div id="errormessage"></div>
                       <div class="row">
